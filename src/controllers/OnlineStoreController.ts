@@ -2,12 +2,14 @@ import ProductService from '@/services/productService';
 import { Handler } from 'express';
 import { getLogger } from '@/utils/loggers';
 import { routesPath } from '@/utils/constants';
+import { productsDB } from '@/database/products';
 
 const logger = getLogger('ONLINE_STORE_ROUTE');
 
 export default class OnlineStoreController {
   // /online-store
   index: Handler = (_req, res) => {
+    const randomProd = productsDB.map((x) => productsDB[Math.floor(Math.random() * productsDB.length)]).slice(0, 8);
     const tratuiloc = ProductService.getProductByCategory('Trà túi lọc');
     const traiCaySayDeo = ProductService.getProductByCategory('Trái cây sấy dẻo');
     const banhQuaTang = ProductService.getProductByCategory('Bánh quà tặng');
@@ -15,6 +17,7 @@ export default class OnlineStoreController {
 
     res.render('online-store/index', {
       layout: 'layout/OnlineStoreLayout',
+      randomProd,
       tratuiloc,
       traiCaySayDeo,
       banhQuaTang,

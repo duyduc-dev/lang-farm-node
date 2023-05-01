@@ -33,6 +33,7 @@
   </div>
   <!-- End: carousel -->
 
+  <!--  -->
   <!-- Begin:    -->
   <div class="mt-10 px-[15px] max-w-screen-custom_x mx-auto overflow-hidden">
     <div class="bg-white">
@@ -44,7 +45,7 @@
           <div id="swiper-product" class="mt-5">
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <template x-data x-for="item in $store.sellingProduct">
+              <!-- <template x-data x-for="item in $store.tratuiloc">
                 <div class="swiper-slide">
                   <a href="#" class="block">
                     <img :src="item.image" alt="" class="w-full h-full max-w-[198px] mx-auto" />
@@ -59,7 +60,21 @@
                     </div>
                   </a>
                 </div>
-              </template>
+              </template> -->
+              <% randomProd.forEach(function(tra){ %>
+              <div class="swiper-slide">
+                <a href="/online-store/<%= tra.id %>" class="block">
+                  <img src="<%= tra.thumbnails[0] %>" alt="" class="w-full h-full max-w-[198px] mx-auto" />
+                  <div class="text-[14px] p-[5px_20px] text-center">
+                    <h3 class="text-granite_gray line-2-3dot"><%= tra.title %></h3>
+                    <p class="text-center text-tiger_eye">
+                      <span x-data x-text="$store.formatMoney(<%= tra.price %>)">123152,200</span>
+                      <span class="underline">đ</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <% }); %>
             </div>
           </div>
         </div>
