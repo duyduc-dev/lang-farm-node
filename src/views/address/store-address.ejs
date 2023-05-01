@@ -1,0 +1,37 @@
+<!-- Begin: body -->
+<main>
+  <div class="pt-[calc(600px_-_140px)]"></div>
+  <section class="mx-auto max-w-screen-custom_lg py-[96px] px-8">
+    <h1 class="text-[38px] font-[300] text-center mb-[21px]">
+      “… Hệ thống trên 40 cửa hàng tại TP. Đà Lạt, Hồ Chí Minh, Nha Trang, Đà Nẵng, Vũng Tàu, Hà Nội. Sẽ mở rộng trên
+      toàn quốc …”
+    </h1>
+
+    <div>
+      <template x-data x-for="(item, index) in $store.storeAddress">
+        <div class="mb-10">
+          <div class="p-[17px]">
+            <hr class="my-8" />
+          </div>
+          <h1 x-text="item.title" class="text-erie_black text-[40px] font-[300] px-[17px]"></h1>
+          <div>
+            <template x-for="(address, i) in item.address" :key="i">
+              <div>
+                <h2 x-text="(i + 1) +'. '+ address.title" class="text-[30px] mt-8 font-[300] px-[17px]"></h2>
+                <p x-html="address.description" class="px-[17px] font-[300] mt-5"></p>
+                <div class="px-[17px] mt-4">
+                  <a
+                    :href="address.map"
+                    class="py-2.5 px-5 mt-4 hover:bg-black hover:text-white font-[300] border-2 inline-block border-black"
+                    >Xem bản đồ</a
+                  >
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
+</main>
+<!-- End: body -->

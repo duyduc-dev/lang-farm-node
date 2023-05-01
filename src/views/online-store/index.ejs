@@ -1,0 +1,212 @@
+<main class="bg-anti_flash_white !min-h-screen">
+  <!-- Begin: carousel -->
+  <div class="z-[-1] max-w-screen-custom_x px-[15px] mx-auto">
+    <div id="swiper-banner" class="relative swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div>
+            <img src="/assets/images/slider1.jpg" class="w-full h-full z-[-1]" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <img src="/assets/images/slider2.webp" class="w-full h-full z-[-1]" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute swiper-btn-prev top-1/2 z-[10] -translate-y-1/2 left-6 duration-300">
+        <button
+          class="rounded-md bg-tiger_eye text-white w-[30px] h-[50px] text-[20px] hover:bg-philippine_gray transition-all">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </div>
+      <div class="absolute swiper-btn-next top-1/2 z-[10] -translate-y-1/2 right-6">
+        <button
+          class="rounded-md bg-tiger_eye w-[30px] h-[50px] hover:bg-philippine_gray transition-all duration-300 text-white text-[20px]">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- End: carousel -->
+
+  <!-- Begin:    -->
+  <div class="mt-10 px-[15px] max-w-screen-custom_x mx-auto overflow-hidden">
+    <div class="bg-white">
+      <div clas="py-5">
+        <p class="p-[15px] pb-2.5 text-dark_charcoal text-[19px]">Sản phẩm bán chạy</p>
+      </div>
+      <div class="mx-2.5 pb-5 mb-1">
+        <div class="relative overflow-hidden">
+          <div id="swiper-product" class="mt-5">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <template x-data x-for="item in $store.sellingProduct">
+                <div class="swiper-slide">
+                  <a href="#" class="block">
+                    <img :src="item.image" alt="" class="w-full h-full max-w-[198px] mx-auto" />
+                    <div class="text-[14px] p-[5px_20px] text-center">
+                      <h3 class="text-granite_gray line-2-3dot" x-text="item.title">
+                        Hồng sấy treo nhật bản 250g bịch dòng phổ
+                      </h3>
+                      <p class="text-center text-tiger_eye">
+                        <span x-text="$store.formatMoney(item.price)"> 152,200</span>
+                        <span class="underline">đ</span>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End:    -->
+  <!-- Begin:    -->
+  <div class="mt-10 px-[15px] max-w-screen-custom_x mx-auto overflow-hidden">
+    <div class="bg-white">
+      <div clas="py-5">
+        <p class="p-[15px] pb-2.5 text-dark_charcoal text-[19px]">Trà túi lọc</p>
+      </div>
+      <div class="mx-2.5 pb-5 mb-1">
+        <div class="relative overflow-hidden">
+          <div id="swiper-product" class="mt-5">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <!-- <template x-data x-for="item in $store.tratuiloc">
+                <div class="swiper-slide">
+                  <a href="#" class="block">
+                    <img :src="item.image" alt="" class="w-full h-full max-w-[198px] mx-auto" />
+                    <div class="text-[14px] p-[5px_20px] text-center">
+                      <h3 class="text-granite_gray line-2-3dot" x-text="item.title">
+                        Hồng sấy treo nhật bản 250g bịch dòng phổ
+                      </h3>
+                      <p class="text-center text-tiger_eye">
+                        <span x-text="$store.formatMoney(item.price)"> 152,200</span>
+                        <span class="underline">đ</span>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </template> -->
+              <% tratuiloc.forEach(function(tra){ %>
+              <div class="swiper-slide">
+                <a href="/online-store/<%= tra.id %>" class="block">
+                  <img src="<%= tra.thumbnails[0] %>" alt="" class="w-full h-full max-w-[198px] mx-auto" />
+                  <div class="text-[14px] p-[5px_20px] text-center">
+                    <h3 class="text-granite_gray line-2-3dot"><%= tra.title %></h3>
+                    <p class="text-center text-tiger_eye">
+                      <span x-data x-text="$store.formatMoney(<%= tra.price %>)">123152,200</span>
+                      <span class="underline">đ</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End:    -->
+  <!-- Begin:    -->
+  <div class="mt-10 px-[15px] max-w-screen-custom_x mx-auto overflow-hidden">
+    <div class="bg-white">
+      <div clas="py-5">
+        <p class="p-[15px] pb-2.5 text-dark_charcoal text-[19px]">Trái cây sấy dẻo</p>
+      </div>
+      <div class="mx-2.5 pb-5 mb-1">
+        <div class="relative overflow-hidden">
+          <div id="swiper-product" class="mt-5">
+            <div class="swiper-wrapper">
+              <% traiCaySayDeo.forEach(function(tra){ %>
+              <div class="swiper-slide">
+                <a href="/online-store/<%= tra.id %>" class="block">
+                  <img src="<%= tra.thumbnails[0] %>" alt="" class="w-full h-full max-w-[198px] mx-auto" />
+                  <div class="text-[14px] p-[5px_20px] text-center">
+                    <h3 class="text-granite_gray line-2-3dot"><%= tra.title %></h3>
+                    <p class="text-center text-tiger_eye">
+                      <span x-data x-text="$store.formatMoney(<%= tra.price %>)">123152,200</span>
+                      <span class="underline">đ</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End:    -->
+  <!-- End:    -->
+  <!-- Begin:    -->
+  <div class="mt-10 px-[15px] max-w-screen-custom_x mx-auto overflow-hidden">
+    <div class="bg-white">
+      <div clas="py-5">
+        <p class="p-[15px] pb-2.5 text-dark_charcoal text-[19px]">Bánh quà tặng</p>
+      </div>
+      <div class="mx-2.5 pb-5 mb-1">
+        <div class="relative overflow-hidden">
+          <div id="swiper-product" class="mt-5">
+            <div class="swiper-wrapper">
+              <% banhQuaTang.forEach(function(tra){ %>
+              <div class="swiper-slide">
+                <a href="/online-store/<%= tra.id %>" class="block">
+                  <img src="<%= tra.thumbnails[0] %>" alt="" class="w-full h-full max-w-[198px] mx-auto" />
+                  <div class="text-[14px] p-[5px_20px] text-center">
+                    <h3 class="text-granite_gray line-2-3dot"><%= tra.title %></h3>
+                    <p class="text-center text-tiger_eye">
+                      <span x-data x-text="$store.formatMoney(<%= tra.price %>)">123152,200</span>
+                      <span class="underline">đ</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End:    -->
+  <!-- Begin:    -->
+  <div class="mt-10 px-[15px] max-w-screen-custom_x mx-auto overflow-hidden">
+    <div class="bg-white">
+      <div clas="py-5">
+        <p class="p-[15px] pb-2.5 text-dark_charcoal text-[19px]">Thịt khô</p>
+      </div>
+      <div class="mx-2.5 pb-5 mb-1">
+        <div class="relative overflow-hidden">
+          <div id="swiper-product" class="mt-5">
+            <div class="swiper-wrapper">
+              <% thitKho.forEach(function(tra){ %>
+              <div class="swiper-slide">
+                <a href="/online-store/<%= tra.id %>" class="block">
+                  <img src="<%= tra.thumbnails[0] %>" alt="" class="w-full h-full max-w-[198px] mx-auto" />
+                  <div class="text-[14px] p-[5px_20px] text-center">
+                    <h3 class="text-granite_gray line-2-3dot"><%= tra.title %></h3>
+                    <p class="text-center text-tiger_eye">
+                      <span x-data x-text="$store.formatMoney(<%= tra.price %>)">123152,200</span>
+                      <span class="underline">đ</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End:    -->
+</main>

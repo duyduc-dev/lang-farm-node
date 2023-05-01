@@ -1,0 +1,28 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "mwpb.java-prettier-formatter",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"]
+  },
+  "[ejs]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter",
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"]
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.inlineSuggest.suppressSuggestions": false
+  },
+  "[css]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter",
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"],
+    "cSpell.fixSpellingWithRenameProvider": false
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

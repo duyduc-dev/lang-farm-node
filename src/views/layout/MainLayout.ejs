@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'angfarm - Đặc sản Dà Lạt</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <script defer src="/javascripts/bundle.js"></script>
+  </head>
+
+  <body>
+    <div x-data="{ visibleSidebar: false }" class="flex" :class="visibleSidebar && '!max-h-screen !overflow-y-hidden'">
+      <div class="flex-1" :class="visibleSidebar && 'ml-[-260px]'">
+        <% include partials/Header%> <%- body %> <% include partials/Footer%>
+      </div>
+
+      <% include partials/Sidebar%>
+    </div>
+  </body>
+</html>

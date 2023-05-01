@@ -1,0 +1,285 @@
+<!-- Begin: body -->
+<main>
+  <div class="pt-[calc(600px_-_140px)]"></div>
+  <section class="mx-auto max-w-screen-custom_lg py-[96px] px-8">
+    <h1 class="text-[38px] font-[300] text-center mb-[21px]">
+      Ăn uống thoả thích, trên 50 loại, đặc sản Đà Lạt, nguồn gốc nông sản, chỉ từ 69,000đ
+    </h1>
+    <p class="text-center font-[300] px-[17px] pb-[17px] break-words">
+      L'angfarm Buffet là nơi khách hàng có thể thưởng thức thoả thích trên 50 loại đặc sản Đà Lạt chỉ từ 69,000. Các
+      món trong menu bao gồm: 10 loại trà thảo mộc, 4 loại cà phê rang xay mộc, 6 loại nước cốt trái cây và nước mát, 15
+      - 20 loại bánh mứt đặc sản, trái cây sấy dẻo, trái cây sấy giòn, 8 - 16 kem gelato, bánh mì ăn với các loại mứt Đà
+      Lạt, khoai lang hấp, bắp hấp, bánh hấp, khoai lang nướng, bắp nướng, bánh tráng nướng Đà Lạt. L’angfarm Buffet
+      hiện đã có mặt tại TP. Đà Lạt và sẽ tiếp tục mở rộng trên toàn quốc.
+    </p>
+
+    <div class="p-[17px]">
+      <hr class="my-8" />
+    </div>
+    <div class="px-[17px] grid-cols-2 grid md:grid-cols-3">
+      <template x-data x-for="url in $store.pathArrayImage2">
+        <div class="mb-5 mr-5">
+          <img :src="url" alt="" class="w-full h-full" />
+        </div>
+      </template>
+    </div>
+  </section>
+  <section class="relative">
+    <div class="absolute top-0 left-0 z-[-1] min-h-[500px] max-h-[500px] w-full overflow-hidden">
+      <img
+        src="/assets/images/banner5.jpg"
+        alt=""
+        class="object-cover w-full h-full overflow-hidden min-h-[500px] max-h-[500px]" />
+      <div class="absolute top-0 bottom-0 left-0 right-0 bg-[rgba(32,26,22,.7)]"></div>
+      <div
+        class="absolute top-0 bottom-0 left-0 right-0 text-white text-[30px] sm:text-[86px] font-[200] text-center p-8 max-w-[956px] mx-auto w-full flex items-center justify-center">
+        <h1 class="animate__animated animate__slideInUp">Đặc điểm nổi bật</h1>
+      </div>
+    </div>
+    <div class="pt-[500px]"></div>
+  </section>
+  <section class="mx-auto max-w-screen-custom_lg py-[96px] px-8">
+    <div class="px-[17px]">
+      <h1 class="text-[35px] font-[300] text-center mb-[21px]">
+        Ăn uống thoả thích, không lo về giá, nguồn gốc nông sản, không giới hạn thời gian, kiến trúc sinh thái, không
+        gian rộng rãi, bé chơi và kết bạn thật vui
+      </h1>
+    </div>
+    <div class="p-[17px]">
+      <hr class="my-8" />
+    </div>
+    <div>
+      <template x-data x-for="(item, key) in $store.salientFeatures">
+        <div class="flex my-10" :class="key % 2 !== 0 && 'flex-row-reverse'">
+          <div class="w-1/2">
+            <img :src="item.photo" alt="" />
+          </div>
+          <div class="w-1/2 md:py-[20px] lg:py-[30px]">
+            <div
+              x-text="item.title"
+              class="text-[20px] md:text-[30px] lg:text-[40px] font-[400] italic px-[12px] sm:px-[20px] md:px-[50px] md:leading-[30px] lg:leading-[40px]"></div>
+            <div
+              x-text="item.description"
+              class="px-[12px] sm:px-[20px] md:px-[50px] font-[300] mt-[10px] lg:text-[16px] sm:text-[14px] text-[12px]"></div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
+  <section class="relative">
+    <div class="absolute top-0 left-0 z-[10] min-h-[500px] max-h-[500px] w-full overflow-hidden">
+      <img
+        src="/assets/images/banner6.jpg"
+        alt=""
+        class="object-cover w-full h-full overflow-hidden min-h-[500px] max-h-[500px]" />
+      <div class="absolute top-0 bottom-0 left-0 right-0 bg-[rgba(32,26,22,.7)]"></div>
+      <div
+        class="absolute z-[10] top-0 bottom-0 left-0 right-0 text-white text-[30px] sm:text-[86px] font-[200] text-center p-8 max-w-[956px] mx-auto w-full flex items-center justify-center">
+        <div class="z-[1000]">
+          <h1 class="animate__animated animate__slideInUp">Một trải nghiệm phải có khi đến Đà Lạt</h1>
+        </div>
+      </div>
+    </div>
+    <div class="pt-[500px] z-[-1]"></div>
+  </section>
+  <section class="mx-auto max-w-screen-custom_lg py-[96px] px-8">
+    <div>
+      <iframe
+        width="100%"
+        class="!h-[250px] sm:!h-[360px] md:!h-[540px]"
+        src="https://www.youtube.com/embed/4D-3yA0_-BY"
+        title="YouTube
+            video player"
+        frameborder="0"
+        allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+            web-share"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+  <section class="relative">
+    <div class="absolute top-0 left-0 z-[10] min-h-[500px] max-h-[500px] w-full overflow-hidden">
+      <img
+        src="/assets/images/banner7.jpg"
+        alt=""
+        class="object-cover w-full h-full overflow-hidden min-h-[500px] max-h-[500px]" />
+      <div class="absolute top-0 bottom-0 left-0 right-0 bg-[rgba(32,26,22,.7)]"></div>
+      <div
+        class="absolute z-[10] top-0 bottom-0 left-0 right-0 text-white text-[30px] sm:text-[86px] font-[200] text-center p-8 max-w-[956px] mx-auto w-full flex items-center justify-center">
+        <div class="z-[1000]">
+          <h1 class="animate__animated animate__slideInUp">Menu buffet</h1>
+        </div>
+      </div>
+    </div>
+    <div class="pt-[500px] z-[-1]"></div>
+  </section>
+  <section class="mx-auto max-w-screen-custom_lg py-[96px] px-8">
+    <h1 class="text-[38px] font-[300] text-center mb-[21px]">
+      Trà thảo mộc, cà phê, nước cốt trái cây, kem gelato, trái cây sấy, bánh mì & mứt, món nướng, món hấp
+    </h1>
+    <p class="text-center font-[300] px-[17px] pb-[17px] break-words">
+      Lưu ý: Menu thực tế có thể thêm hoặc thiếu một số món do một số lý do về nguyên vật liệu hay mùa vụ
+    </p>
+    <div class="p-[17px]">
+      <hr class="my-8" />
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2">
+      <template x-for="card in $store.menuBuffet">
+        <div class="w-full p-[17px]">
+          <div>
+            <img :src="card.photo" alt="" />
+          </div>
+          <div class="pt-[17px]">
+            <h4 x-text="card.title" class="text-[28px] font-[300]"></h4>
+            <p class="mt-4 font-[300]" x-text="card.description"></p>
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
+  <section class="relative">
+    <div class="absolute top-0 left-0 z-[10] min-h-[500px] max-h-[500px] w-full overflow-hidden">
+      <img
+        src="/assets/images/banner8.jpg"
+        alt=""
+        class="object-cover w-full h-full overflow-hidden min-h-[500px] max-h-[500px]" />
+      <div class="absolute top-0 bottom-0 left-0 right-0 bg-[rgba(32,26,22,.7)]"></div>
+      <div
+        class="absolute z-[10] top-0 bottom-0 left-0 right-0 text-white text-[30px] sm:text-[86px] font-[200] text-center p-8 max-w-[956px] mx-auto w-full flex items-center justify-center">
+        <div class="z-[1000]">
+          <h1 class="animate__animated animate__slideInUp">Vé buffet và điều khoản</h1>
+        </div>
+      </div>
+    </div>
+    <div class="pt-[500px] z-[-1]"></div>
+  </section>
+  <section class="mx-auto max-w-screen-custom_lg py-[96px] px-8">
+    <h1 class="text-[38px] font-[300] text-center mb-[21px]">
+      Chỉ từ 69,000, không chi phí phát sinh, không giới hạn thời gian, miễn phí em bé đi cùng
+    </h1>
+    <div class="p-[17px]">
+      <hr class="my-8" />
+    </div>
+    <div class="">
+      <h1 class="text-erie_black text-[40px] font-[300] px-[17px]">Giá vé</h1>
+      <div>
+        <p class="my-4 font-[300] px-[17px]">
+          Khách hàng đến mua vé trực tiếp tại cửa hàng. Một số thông tin vé buffet như sau:
+        </p>
+        <ul class="pl-10 font-[300] px-[17px]">
+          <li class="before:content-['\2022'] my-2">Giá vé buffet đã bao gồm thuế GTGT 10%.</li>
+          <li class="before:content-['\2022'] my-2">Không giới hạn thời gian sử dụng dịch vụ trong ngày.</li>
+          <li class="before:content-['\2022'] my-2">Vé mua rồi xin không đổi trả.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-[30px] mt-8 font-[300] px-[17px]">Đà lạt</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3">
+          <div class="p-[17px]">
+            <h3 class="text-erie_black font-[400] text-[18px] tracking-[4px] uppercase mb-[9px]">MIỄN PHÍ</h3>
+            <p class="font-[300] mt-4 tracking-[0.5px]">Trẻ em cao dưới 1m đi kèm người lớn Các ngày trong tuần</p>
+          </div>
+          <div class="p-[17px]">
+            <h3 class="text-erie_black font-[400] text-[18px] tracking-[4px] uppercase mb-[9px]">69,000</h3>
+            <p class="font-[300] mt-4 tracking-[0.5px]">Người lớn và trẻ em cao trên 1m Thứ 2 đến thứ 6</p>
+          </div>
+          <div class="p-[17px]">
+            <h3 class="text-erie_black font-[400] text-[18px] tracking-[4px] uppercase mb-[9px]">79,000</h3>
+            <p class="font-[300] mt-4 tracking-[0.5px]">Người lớn và trẻ em cao trên 1m Thứ 7, chủ nhật, ngày lễ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-[17px]">
+      <hr class="my-8" />
+    </div>
+    <div>
+      <h1 class="text-erie_black text-[40px] font-[300] px-[17px]">Điều khoản</h1>
+      <h2 class="text-[30px] mt-8 font-[300] px-[17px]">Điều khoản sử dụng vé</h2>
+      <ul class="pl-10 font-[300] px-[17px]">
+        <li class="before:content-['\2022'] my-2">Vé buffet có giá trị sử dụng 1 lần cho 1 người.</li>
+        <li class="before:content-['\2022'] my-2">Vé buffet hợp lệ phải còn hạn sử dụng.</li>
+        <li class="before:content-['\2022'] my-2">
+          Vé buffet hợp lệ phải còn nguyên vẹn, không chắp vá, không mất thông tin, không có dấu hiệu thay đổi thông tin
+          in trên vé.
+        </li>
+        <li class="before:content-['\2022'] my-2">Vé buffet không có giá trị quy đổi thành tiền mặt.</li>
+        <li class="before:content-['\2022'] my-2">Vé buffet áp dụng cho khách hàng cao từ 1m trở lên.</li>
+        <li class="before:content-['\2022'] my-2">
+          Trẻ em cao dưới 1m được miễn phí với điều kiện đi kèm 1 người lớn.
+        </li>
+      </ul>
+      <h2 class="text-[30px] mt-8 font-[300] px-[17px]">Điều khoản sử dụng dịch vụ</h2>
+      <ul class="pl-10 font-[300] px-[17px]">
+        <li class="before:content-['\2022'] my-2">Không mang thức ăn ra khỏi khu vực buffet.</li>
+        <li class="before:content-['\2022'] my-2">
+          Khách hàng ra khỏi khu vực buffet xem như đã sử dụng xong dịch vụ.
+        </li>
+        <li class="before:content-['\2022'] my-2">Tránh lãng phí thức ăn, chỉ lấy vừa đủ dùng.</li>
+        <li class="before:content-['\2022'] my-2">Không đem thú nuôi vào khu vực buffet.</li>
+        <li class="before:content-['\2022'] my-2">
+          Không sử dụng thức uống có cồn, chất kích thích trong khu vực buffet.
+        </li>
+        <li class="before:content-['\2022'] my-2">Tránh gây ồn ào, ảnh hưởng đến khách hàng xung quanh.</li>
+        <li class="before:content-['\2022'] my-2">
+          Không đánh bài hoặc bất kỳ hình thức cờ bạc nào trong khu vực buffet.
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="relative">
+    <div class="absolute top-0 left-0 z-[10] min-h-[500px] max-h-[500px] w-full overflow-hidden">
+      <img
+        src="/assets/images/banner9.jpg"
+        alt=""
+        class="object-cover w-full h-full overflow-hidden min-h-[500px] max-h-[500px]" />
+      <div class="absolute top-0 bottom-0 left-0 right-0 bg-[rgba(32,26,22,.7)]"></div>
+      <div
+        class="absolute z-[10] top-0 bottom-0 left-0 right-0 text-white text-[30px] sm:text-[86px] font-[200] text-center p-8 max-w-[956px] mx-auto w-full flex items-center justify-center">
+        <div class="z-[1000]">
+          <h1 class="animate__animated animate__slideInUp">Thưởng thức buffet ngay hôm nay</h1>
+        </div>
+      </div>
+    </div>
+    <div class="pt-[500px] z-[-1]"></div>
+  </section>
+  <section class="mx-auto max-w-screen-custom_lg py-[96px] px-8">
+    <h1 class="text-[38px] font-[300] text-center mb-[21px]">
+      Ăn uống thoả thích, trên 50 loại, đặc sản Đà Lạt, nguồn gốc nông sản, chỉ từ 69,000
+    </h1>
+    <p class="text-center font-[300] px-[17px] pb-[17px] break-words">
+      Khách hàng có thể thưởng thức L’angfarm Buffet bằng cách đến mua vé trực tiếp tại cửa hàng L’angfarm Buffet hoặc
+      đặt chỗ trước qua điện thoại
+    </p>
+    <div class="p-[17px]">
+      <hr class="my-8" />
+    </div>
+    <div class="">
+      <div class="grid sm:grid-cols-2">
+        <div class="p-[17px]">
+          <h4 class="text-[30px] font-[300]">Đến trực tiếp cửa hàng</h4>
+          <p class="mt-4 font-[300] tracking-[0.5px]">Đã có mặt tại TP. Đà Lạt và sẽ mở rộng trên toàn quốc</p>
+          <div>
+            <a
+              class="py-[10px] font-[300] px-[26px] border-2 border-black hover:bg-black mt-4 inline-block hover:text-white transition-all duration-300"
+              href="/buffet-address"
+              >Xem địa chỉ
+            </a>
+          </div>
+        </div>
+        <div class="p-[17px]">
+          <h4 class="text-[30px] font-[300]">Đặt chỗ qua điện thoại</h4>
+          <p class="mt-4 font-[300] tracking-[0.5px]">Gọi tổng đài điện thoại số: 19009065 để được tư vấn</p>
+          <div>
+            <a
+              class="py-[10px] font-[300] px-[26px] border-2 border-black hover:bg-black mt-4 inline-block hover:text-white transition-all duration-300"
+              href="tel:19009065"
+              >Gọi ngay
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- End: body -->

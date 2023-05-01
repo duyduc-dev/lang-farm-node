@@ -1,0 +1,54 @@
+<!-- Begin: header -->
+<header class="header-page" class="header-page">
+  <div class="h-[140px] w-full flex justify-between relative">
+    <div class="absolute top-0 left-0 z-[-1] min-h-[600px] max-h-[600px] w-full overflow-hidden">
+      <img src="<%= banner %>" alt="" class="object-cover w-full h-full overflow-hidden min-h-[600px] max-h-[600px]" />
+      <div class="absolute top-0 bottom-0 left-0 right-0 bg-[rgba(32,26,22,.7)]"></div>
+      <div
+        class="absolute top-0 bottom-0 left-0 right-0 text-white text-[30px] sm:text-[86px] font-[200] text-center p-8 max-w-[956px] mx-auto w-full flex items-center justify-center">
+        <h1 class="animate__animated animate__slideInUp">L’angfarm Store</h1>
+      </div>
+    </div>
+
+    <div
+      class="flex justify-between w-full p-5 h-[140px] transition-all duration-300"
+      :class="$store.positionHeader > 800 && 'fixed bg-[rgba(32,26,22,.9)] z-[1000]'">
+      <div class="w-[100px] h-[100px]">
+        <img src="/assets/images/logo.png" alt="" />
+      </div>
+      <div class="flex items-center">
+        <div x-data class="items-center hidden lg:flex">
+          <template x-data x-for="header in $store.rawHeader">
+            <div x-data="{hover: false}" class="relative group" @mouseover="hover = true" @mouseout="hover = false">
+              <a
+                :href="header.html"
+                x-text="header.title"
+                class="animate__animated animate__fadeIn hover:text-tiger_eye transition-all duration-300 cursor-pointer px-[13px] py-[10px] uppercase text-white text-[13px] font-[300] tracking-[2px]"
+                :class="$store.router.pathname === header.html && '!text-tiger_eye'">
+              </a>
+              <template x-data x-if="header.children">
+                <div
+                  class="transition-all duration-300 absolute left-0 !h-0 !p-0 text-white top-full group-hover:!h-auto bg-erie_black text-[13px] group-hover:!py-[13px] leading-[16px] tracking-[2px] whitespace-nowrap uppercase font-[300]">
+                  <template x-for="item in header.children" :key="item.title">
+                    <a
+                      :href="item.html"
+                      class="block px-5 group-hover:!py-1.5 py-0 pointer-events-none group-hover:pointer-events-auto cursor-pointer hover:text-tiger_eye transition-all duration-300"
+                      x-text="hover ? item.title : ''"></a>
+                  </template>
+                </div>
+              </template>
+            </div>
+          </template>
+        </div>
+      </div>
+      <div class="flex items-center animate__animated animate__fadeIn lg:hidden">
+        <div class="flex flex-col gap-1.5 cursor-pointer" @click="visibleSidebar=!visibleSidebar">
+          <div class="bg-white w-[22px] h-[2px]"></div>
+          <div class="bg-white w-[22px] h-[2px]"></div>
+          <div class="bg-white w-[22px] h-[2px]"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End: header -->

@@ -1,0 +1,114 @@
+<!-- Begin: header -->
+<header>
+  <div class="bg-tiger_eye">
+    <div class="mx-auto max-w-screen-custom_x max-custom_md:max-w-[750px] custom_md:h-[51px] h-[96px] px-[15px]">
+      <div class="flex justify-between h-full max-custom_md:justify-evenly max-custom_md:flex-col">
+        <!-- Begin: category -->
+        <div class="relative" x-data="{isOpen: false}">
+          <div
+            @click="isOpen=!isOpen"
+            class="items-center hidden h-full gap-4 px-4 cursor-pointer bg-dark_charcoal custom_md:flex">
+            <div class="w-[23px] flex flex-col">
+              <div class="my-[2px] h-[3px] bg-white rounded"></div>
+              <div class="my-[2px] h-[3px] bg-white rounded"></div>
+              <div class="my-[2px] h-[3px] bg-white rounded"></div>
+            </div>
+            <p class="text-white text-[14px]">Danh mục sản phẩm</p>
+          </div>
+          <div x-show="isOpen" class="absolute z-[999] left-0 right-0 top-full">
+            <div
+              @click.outside="isOpen=false"
+              class="bg-white py-2.5 shadow-[rgba(149,157,165,0.2)_0px_8px_24px] max-custom_md:hidden overflow-y-auto max-h-[500px]">
+              <template x-data x-for="category in $store.categories">
+                <div>
+                  <a
+                    href="#"
+                    x-text="category.title"
+                    class="hover:bg-[rgba(0,0,0,.03)] transition-all duration-300 py-[7px] px-2.5 text-[14px] block font-normal"></a>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+        <!-- End: category -->
+        <!-- Begin: logo -->
+        <div class="flex">
+          <div class="flex items-center flex-1">
+            <a href="/online-store" class="inline-flex items-center">
+              <div>
+                <img src="/assets/images/logo-text.webp" alt="" class="h-[38px]" />
+              </div>
+            </a>
+          </div>
+          <div class="custom_md:hidden">
+            <!-- Begin: button mobile show category -->
+            <div @click.outside="isOpen=false" x-data="{isOpen:false}" class="relative">
+              <button @click="isOpen=!isOpen" x-data class="flex flex-col items-center text-white my-[6px]">
+                <div class="flex flex-col gap-1.5">
+                  <div class="h-[2px] w-[30px] bg-white"></div>
+                  <div class="h-[2px] w-[30px] bg-white"></div>
+                  <div class="h-[2px] w-[30px] bg-white"></div>
+                </div>
+                <span class="text-[12px]">Menu</span>
+              </button>
+              <div
+                x-show="isOpen"
+                x-transition
+                class="z-[100] max-h-screen overflow-y-auto py-2.5 fixed left-0 right-0 bg-white top-[48px]">
+                <template x-data x-for="category in $store.categories">
+                  <div>
+                    <a
+                      href="#"
+                      x-text="category.title"
+                      class="block p-2.5 hover:bg-tiger_eye hover:text-white border-b"></a>
+                  </div>
+                </template>
+              </div>
+            </div>
+            <!--   End: button mobile show category -->
+          </div>
+        </div>
+        <!-- End: logo -->
+        <!-- Begin: search -->
+
+        <div class="flex items-center">
+          <div class="w-[348px] max-custom_md:w-full p-[3px_5px] relative">
+            <input
+              type="text"
+              placeholder="Tìm kiếm sản phẩm"
+              class="bg-white rounded-full text-[14px] font-normal h-[40px] outline-none w-full pl-5 py-2.5 pr-10" />
+            <div class="absolute -translate-y-1/2 top-1/2 right-5">
+              <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+        </div>
+        <!-- End: search -->
+        <!-- Begin: call -->
+        <div class="items-center hidden border-r custom_md:flex border-r-cadmium_green">
+          <a href="tel:19009065" class="flex items-center gap-2 text-white px-[10px] py-[3px]">
+            <div class="text-[20px]">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <p class="font-bold text-[14px]">19009065</p>
+              <p class="text-[12px]">07:30 - 22:30</p>
+            </div>
+          </a>
+        </div>
+        <!-- End: call -->
+        <!-- Begin: location -->
+        <a href="/address/store-address" class="items-center hidden gap-3 text-white custom_md:flex">
+          <div>
+            <i class="fa-sharp fa-solid fa-location-dot text-[20px]"></i>
+          </div>
+          <div>
+            <p class="font-bold text-[14px]">Xem 40 cửa hàng</p>
+            <p class="text-[12px]">07:30 - 22:30</p>
+          </div>
+        </a>
+        <!-- End: location -->
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End: header -->
