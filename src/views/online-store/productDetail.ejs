@@ -92,7 +92,11 @@
                       @click="inputValue && inputValue >= 2? --inputValue : 1">
                       -
                     </button>
-                    <input type="text" :value="inputValue" class="flex-1 w-full h-full text-center outline-none" />
+                    <input
+                      type="text"
+                      :value="inputValue"
+                      class="flex-1 w-full h-full text-center outline-none"
+                      @input="inputValue=/[0-9]/.test($el.value) && $el.value ? $el.value : ''" />
                     <button class="bg-[#eee] w-[30px] h-[30px]" @click="inputValue=inputValue?++inputValue : 1">
                       +
                     </button>
