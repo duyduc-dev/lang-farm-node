@@ -9,6 +9,10 @@ const ProductService = {
   getById(id: string): ProductModel | undefined {
     return productsDB.find((x) => x.id === id);
   },
+
+  getAll(): ProductModel[] {
+    return productsDB || [];
+  },
 };
 
 export default ProductService;

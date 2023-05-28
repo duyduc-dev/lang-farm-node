@@ -14,7 +14,6 @@ class App {
     this.app = express();
     this.config();
     this.errorHandler();
-    console.log('>>>>', productsDB);
   }
 
   private config() {

@@ -10,4 +10,10 @@ export const routesPath = {
   },
   CONTACT: '/contact',
   ONLINE_STORE: '/online-store',
+  LOGIN: '/auth/login',
+  REGISTER: '/auth/register',
+  ADMIN: '/admin',
+  ADMIN_DASHBOARD: '/dashboard',
+  ADMIN_PRODUCTS: '/products',
+  ADMIN_LOGIN: '/login',
 };

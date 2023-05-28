@@ -25,6 +25,7 @@ export default class OnlineStoreController {
     });
   };
 
+  // /online-store/:id
   productDetail: Handler = (req, res) => {
     const id = req.params.id;
     const product = ProductService.getById(req.params.id);
@@ -37,6 +38,20 @@ export default class OnlineStoreController {
       layout: 'layout/OnlineStoreLayout',
       product,
       productRelate,
+    });
+  };
+
+  // /online-store/auth/login
+  login: Handler = (_, res) => {
+    res.render('auth/login', {
+      layout: 'layout/OnlineStoreLayout',
+    });
+  };
+
+  // /online-store/auth/register
+  register: Handler = (_, res) => {
+    res.render('auth/register', {
+      layout: 'layout/OnlineStoreLayout',
     });
   };
 }

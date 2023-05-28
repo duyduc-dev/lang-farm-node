@@ -8,5 +8,7 @@ const onlineStoreController = new OnlineStoreController();
 /* GET home page. */
 router.get(routesPath.HOME, onlineStoreController.index);
 router.get(routesPath.HOME + ':id', onlineStoreController.productDetail);
+router.get(routesPath.LOGIN, onlineStoreController.login);
+router.get(routesPath.REGISTER, onlineStoreController.register);
 
 export default router;
